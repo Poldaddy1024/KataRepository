@@ -83,6 +83,9 @@ This Solution has the following structure:
   
   
   
+  Here you are an Screenshot of the result:
+  ![alt text](https://github.com/Poldaddy1024/KataRepository/blob/master/ReportOk.jpg)
+  
   Thanks, for the opportunity.
   Kind regards!
   
