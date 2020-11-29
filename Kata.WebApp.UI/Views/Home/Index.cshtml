@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Kata Web App for reading text file, please <a href="https://docs.microsoft.com/aspnet/core">for source code go to GitHub</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-default">
+            <div class="card-header ">
+                <div class="card-title">
+                    <span class="">Select a plain text file</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <form id="formTrips" >
+                    <div class="fallback">
+                        <input type="file" name="fileTrips" id="fileTrips" />
+                    </div>
+                    <div class="dz-message text-center" data-dz-message>
+                        <span class="">Drop a file or click here!</span> <br /> <br />                        
+                    </div>
+                    <br />
+                    <br />
+                    <button aria-label="" class="btn btn-complete pull-right btn-lg btn-block" type="submit">
+                        Upload Trips
+                    </button>
+                </form>
+                <br />                
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<div class="row">
+    <div class="col-lg-12" id="PlaceHolderResult">
+        
+    </div>
+</div>
+

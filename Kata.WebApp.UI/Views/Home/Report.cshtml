@@ -1,0 +1,36 @@
+﻿@model Kata.WebApp.UI.MoldeViews.TripModelView
+@{
+    Layout = null;
+}
+<div class="card card-default">
+    <div class="card-header  d-flex justify-content-between">
+        <div class="card-title">
+            Trip's Report
+        </div>        
+    </div>
+    <div class="card-body">
+        <div class="dataTables_wrapper no-footer">
+            <div class="table-responsive sm-m-b-15">
+                <table class="table table-striped dataTable no-footer" role="grid">
+                    <thead>
+                        <tr role="row">
+                            <th rowspan="1" colspan="1"  style="width: 375px;">Driver</th>
+                            <th rowspan="1" colspan="1"  style="width: 353px;">Miles</th>
+                            <th rowspan="1" colspan="1"  style="width: 227px;">Mph</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var trip in Model.Trips.OrderByDescending(x=> x.TotalMiles))
+                        {
+                            <tr class="gradeA odd" role="row">
+                                <td >@trip.DriverName</td>
+                                <td >@trip.TotalMiles</td>
+                                <td >@trip.AvgMph</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+    </div>
+</div>
