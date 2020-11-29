@@ -34,22 +34,35 @@ Bob: 0 miles
 --------------------------------
 
 This Solution has the following structure:
-1.- Front End:
-  1.1- Client App  
+
+1.- Front End:	
+
+	1.1- Client App  
+	
 2.- Back End:
-  2.1- Service Layer
-  2.2- Business Layer
-  2.3- Data Access Layer
-  2.3- ORM
-  2.4- Business Model
-  2.5- Dto
+
+	2.1- Service Layer
+  
+  	2.2- Business Layer
+  
+  	2.3- Data Access Layer
+  
+  	2.3- ORM
+  
+  	2.4- Business Model
+  
+  	2.5- Dto
+  
   
   The complete solution integrates a Client Server Arquitecture within a Monolithic N-Layer - 1 Tier Structure patten.
+  
   The Front End:
+  
     The Client App is a Web App .Net core 3.1 MVC.
   The Back End:
-    The Service Layer is a Web Api restful .Net core 3.1
-    With .Net core 3.1 Class libraries for BL, DAL, ORM, Business Model and Dto.
+  
+    	The Service Layer is a Web Api restful .Net core 3.1
+    	With .Net core 3.1 Class libraries for BL, DAL, ORM, Business Model and Dto.
   
   The ORM used is Entity FrameWork .Net core "Code First" Approach with Fluent API (Not Migrations).
   
@@ -62,10 +75,11 @@ This Solution has the following structure:
   And finally the Web Api Restful communicates with the Client app using DTO's.
     
   CONSIDERATIONS TO GOOD FUNCTIONING OF THE SOLUTION
-  1.- Run the Data Base Creational SQL Script in order to generate the Db(Please refer to this script at the end of this read me file).
-  2.- After the DB is created, it is important to update the appsetting.json file within the Web API Restful app with the correct settings for the Db connection string.
-  3.- When the Web APi restful app is up and running copy the "localhost" URL provided for this app and update the following line within the Client App (HomeController/UploadTrips):
-  var response = await client.PostAsync("http://localhost:52131/" + "UploadTrips", form); located at line 74.
+  
+  	1.- Run the Data Base Creational SQL Script in order to generate the Db(Please refer to this script at the end of this read me file).
+  	2.- After the DB is created, it is important to update the appsetting.json file within the Web API Restful app with the correct settings for the Db connection string.
+  	3.- When the Web APi restful app is up and running copy the "localhost" URL provided for this app and update the following line within the Client App (HomeController/UploadTrips):
+  	var response = await client.PostAsync("http://localhost:52131/" + "UploadTrips", form); located at line 74.
   
   
   
